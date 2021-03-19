@@ -1,12 +1,40 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es6"],
     "moduleResolution": "node",
     "noEmit": true,
-    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"]
+    },
     "resolveJsonModule": true,
-    "strict": true
-  }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "pretty": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "noImplicitReturns": false,
+    "typeRoots" : [
+      "./node_modules/@types",
+      "src/@types"
+    ],
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js"
+  ]
 }
