@@ -62,6 +62,7 @@ const gaps = readonly({
  * @readonly
  * @description UX-based project style guide used to extend the
  * @type {DefaultTheme} type from the @module styled-components library.
+ * @author Efraa
  */
 export const stylesGuide = readonly({
   colors,

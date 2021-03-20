@@ -11,6 +11,7 @@ export const DeviceContext = createContext<TDeviceSettingsState>(
  * Device Provider
  * @description Provides device settings to the whole application,
  * appearance, internet connection, and other stuff...
+ * @author Efraa
  */
 export const DeviceProvider: React.FC = props => {
   const [data, setData] = useState(deviceSettingsInitialState)

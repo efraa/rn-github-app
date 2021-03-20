@@ -10,5 +10,6 @@ import { DeviceContext } from '../providers/device'
  * or avoid API calls when you don't have internet.
  * @example You can use
  * const { network: { isConnected }, appearance: { isDarkMode } } = useDevice()
+ * @author Efraa
  */
 export const useDevice = () => useContext(DeviceContext)

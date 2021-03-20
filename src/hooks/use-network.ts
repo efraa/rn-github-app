@@ -4,6 +4,7 @@ import Net from '@react-native-community/netinfo'
 /**
  * Network Hook
  * @description Allows you to get information about connection type and connection quality.
+ * @author Efraa
  */
 export const useNetwork = () => {
   const [isConnected, setConnection] = useState(true)

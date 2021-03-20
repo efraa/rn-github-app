@@ -7,6 +7,7 @@ type IBased = 'width' | 'height'
  * Min Dimensions @constant
  * @readonly
  * @description Dimensions of the iPhone 6, 7 and 8.
+ * @author Efraa
  */
 const minDimensions = readonly({
   with: 375,
@@ -31,6 +32,7 @@ const operations = readonly({
  * @function deviceDimensions
  * @description Adapt a value based on the width or height of the screen
  * so that you can use it for width, height, top, fontSize, borderRadius, etc...
+ * @author Efraa
  */
 export function deviceDimensions(size: number, based: IBased = 'width') {
   const newSize = operations.output(operations.size(size, based))

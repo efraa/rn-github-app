@@ -15,6 +15,7 @@ export const images = readonly({
  * Resources
  * @readonly
  * @description Export all resources using lazy loading on a single object
+ * @author Efraa
  */
 export const resources = readonly({
   images,
