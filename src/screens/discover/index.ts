@@ -1,0 +1,1 @@
+export { DiscoverScreen } from './discover'
