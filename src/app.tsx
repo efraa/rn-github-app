@@ -4,9 +4,11 @@ import { registerRootComponent } from 'expo'
 
 // App Providers
 import { StyledProvider } from './providers/styles'
-import styled from 'styled-components/native'
+import { DeviceProvider } from './providers/device'
 
 // Tests
+import styled from 'styled-components/native'
+
 const TextStyled = styled.Text`
   color: ${({ theme: { colors } }) => colors.defaultTextColor};
   font-family: ${({ theme: { fonts } }) => fonts.family};
@@ -20,12 +22,14 @@ const ViewStyled = styled.View`
 `
 
 const App = () => (
-  <StyledProvider>
-    <ViewStyled>
-      <TextStyled>Github App!</TextStyled>
-      <StatusBar style="auto" />
-    </ViewStyled>
-  </StyledProvider>
+  <DeviceProvider>
+    <StyledProvider>
+      <ViewStyled>
+        <TextStyled>Github App!</TextStyled>
+        <StatusBar style="dark" />
+      </ViewStyled>
+    </StyledProvider>
+  </DeviceProvider>
 )
 
 export default registerRootComponent(App)
