@@ -1,0 +1,19 @@
+{
+    "discoverTitle": "Discover",
+    "discoverText": "Your profile page tells people the story of your work through the repositories you’re interested in, the contributions you’ve made, and the conversations you’ve had.",
+    "github": "Github",
+    "filters": "Filters",
+    "filtersTitle": "Suggested filters",
+    "filtersText": "To filter detailed information about a user on GitHub, you can classify and sort your results in ways that are relevant to you.",
+    "filtersSortBy": "Sort by",
+    "filtersSortByOptions": ["Newest", "Oldest", "By name (A-Z)"],
+    "filtersPerPage": "Per page",
+    "apply": "Apply",
+    "following": "Following",
+    "repos": "Repositories",
+    "reposText": "A repository contains all of your project’s files and each file’s revision history. You can discuss and manage your project’s work within the repository.",
+    "reposCommits": "Latest commits •",
+    "reposButtonText": "See project",
+    "emptyInternetTitle": "No internet connection!",
+    "emptyInternetText": "Your internet connection is down. Please fix it and then you can continue using Github App!"
+}
