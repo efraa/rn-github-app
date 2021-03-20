@@ -26,11 +26,11 @@ export const updateLanguage = (localization: Localization.Localization) => {
 
 /**
  * Handler Localization
+ *
  * @description It uses the language established in the device in the
  * first instance, if it finds a supported language it will be selected,
  * otherwise, it will use the default language.
- * @todo When adding authentication, priority should be given to
- * the user's language if they have selected it.
+ *
  * @returns {Localization.Localization}
  * @author Efraa
  */
