@@ -37,5 +37,5 @@ const operations = readonly({
 export function deviceDimensions(size: number, based: IBased = 'width') {
   const newSize = operations.output(operations.size(size, based))
 
-  return Platform.OS === 'ios' ? newSize : newSize - 2
+  return newSize
 }
