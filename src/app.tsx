@@ -7,13 +7,16 @@ import { StyledProvider } from './providers/styles'
 import { DeviceProvider } from './providers/device'
 import { LocalizationProvider } from './providers/languages'
 import { Navigation } from './providers/navigation'
+import { QueryProvider } from './providers/react-query'
 
 const App = () => (
   <LocalizationProvider>
     <DeviceProvider>
       <StatusBar style="dark" />
       <StyledProvider>
-        <Navigation />
+        <QueryProvider>
+          <Navigation />
+        </QueryProvider>
       </StyledProvider>
     </DeviceProvider>
   </LocalizationProvider>
