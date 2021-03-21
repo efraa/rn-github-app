@@ -1,4 +1,4 @@
-import { SCREENS } from '../providers/navigation/screens'
+import { SCREENS } from '../providers/navigation/constants'
 import { useNavigation as useRNavigation } from '@react-navigation/native'
 
 export const useNavigation = () => {

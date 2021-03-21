@@ -1,6 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import { SCREENS } from '../screens'
+import { DEFAULT_SCREENS_OPTIONS, SCREENS } from '../constants'
 
 // Screens
 import { DiscoverScreen } from 'src/screens/discover'
@@ -15,7 +15,7 @@ const { Navigator, Screen } = createStackNavigator()
  */
 export const AppNavigator = () => (
   <Navigator
-    screenOptions={{ headerBackTitleVisible: false }}
+    screenOptions={DEFAULT_SCREENS_OPTIONS}
     initialRouteName={SCREENS.discover}
   >
     <Screen name={SCREENS.discover} component={DiscoverScreen}></Screen>

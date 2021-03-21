@@ -4,7 +4,7 @@ import { View } from 'react-native'
 import { readonly } from 'src/helpers/readonly'
 import { useNavigation } from 'src/hooks/use-navigation'
 import { useNavigation as useRNavigation } from '@react-navigation/core'
-import { SCREENS } from 'src/providers/navigation/screens'
+import { SCREENS } from 'src/providers/navigation/constants'
 import { FilterSVG } from '../svg'
 import { FilterButton as StyledFilter } from './styles'
 import { Heading } from '../typographies'
@@ -22,9 +22,6 @@ export const FilterButton = memo(() => {
 })
 
 export const headerOptions = readonly({
-  headerStyle: {
-    shadowColor: 'transparent',
-  },
   headerLeftContainerStyle: {
     paddingLeft: 12,
   },

@@ -4,7 +4,7 @@ import {
   TransitionPresets,
   StackNavigationOptions,
 } from '@react-navigation/stack'
-import { SCREENS } from '../screens'
+import { DEFAULT_SCREENS_OPTIONS, SCREENS } from '../constants'
 import { AppNavigator } from './app-stack'
 
 // Screens
@@ -41,10 +41,10 @@ const modalPresentationIOS = ({
   route,
   navigation,
 }): StackNavigationOptions => ({
+  ...DEFAULT_SCREENS_OPTIONS,
+  headerShown: false,
   gestureEnabled: true,
   cardOverlayEnabled: true,
-  headerBackTitleVisible: false,
-  headerShown: false,
   headerStatusBarHeight:
     navigation.dangerouslyGetState().routes.indexOf(route) > 0 ? 0 : undefined,
   ...TransitionPresets.ModalPresentationIOS,
@@ -56,13 +56,7 @@ export const RootNavigator = () => (
     initialRouteName={SCREENS.appStack}
     screenOptions={modalPresentationIOS}
   >
-    <Screen
-      options={{
-        headerShown: false,
-      }}
-      name={SCREENS.appStack}
-      component={AppNavigator}
-    />
+    <Screen name={SCREENS.appStack} component={AppNavigator} />
     {ModalScreens()}
   </Navigator>
 )

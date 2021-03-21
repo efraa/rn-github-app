@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { useNavigation } from 'src/hooks/use-navigation'
 import { useLanguage } from 'src/providers/languages'
-import { SCREENS } from 'src/providers/navigation/screens'
+import { SCREENS } from 'src/providers/navigation/constants'
 import { Container, Name, Picture, Text, Content } from './styles'
 
 interface IUserCardProps {

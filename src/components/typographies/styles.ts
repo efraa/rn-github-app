@@ -19,3 +19,7 @@ export const SText = styled.Text`
     max-width: 90%;
   `}
 `
+
+export const SContent = styled.View`
+  margin-top: ${({ theme: { gaps } }) => gaps.normal};
+`
