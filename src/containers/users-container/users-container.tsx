@@ -1,10 +1,11 @@
 import { IUserFromList } from '@api'
 import React, { useMemo } from 'react'
 import { Spinner } from 'src/components/spinner'
+import { Text } from 'src/components/typographies'
 import { UserCard } from 'src/components/user-card'
 import { useUsers } from 'src/hooks/api/use-users'
 import { useLanguage } from 'src/providers/languages'
-import { Container, Text } from './styles'
+import { Container } from './styles'
 
 export const UsersContainer = () => {
   const { users, fetchNextPage, isSuccess } = useUsers()

@@ -6,7 +6,8 @@ import { useNavigation } from 'src/hooks/use-navigation'
 import { useNavigation as useRNavigation } from '@react-navigation/core'
 import { SCREENS } from 'src/providers/navigation/screens'
 import { FilterSVG } from '../svg'
-import { Title as StyledTitle, FilterButton as StyledFilter } from './styles'
+import { FilterButton as StyledFilter } from './styles'
+import { Heading } from '../typographies'
 
 export const FilterButton = memo(() => {
   const { navigate } = useNavigation()
@@ -19,10 +20,6 @@ export const FilterButton = memo(() => {
     </StyledFilter>
   )
 })
-
-export const Title = memo(({ title }: { title: string }) => (
-  <StyledTitle>{title}</StyledTitle>
-))
 
 export const headerOptions = readonly({
   headerStyle: {
@@ -52,7 +49,7 @@ export const useHeader = (title: string) => {
   useLayoutEffect(() => {
     setOptions({
       ...headerOptions,
-      headerLeft: () => <Title title={title} />,
+      headerLeft: () => <Heading>{title}</Heading>,
     } as StackNavigationOptions)
   }, [])
 
