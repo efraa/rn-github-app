@@ -25,7 +25,9 @@ Follow this [guide](https://reactnative.dev/docs/environment-setup).
 
 #### Running with Expo
 
-Run ``` yarn start ```
+1. Copy ``` example.env ``` to ``` .env ```
+2. Run ``` yarn install ```
+2. Run ``` yarn start ```
 
 > This should open the Expo Developer tools and from there you can start your
 > emulators or use your device. As an alternative to this, you can
@@ -37,6 +39,10 @@ Run ``` yarn start ```
 * [React Navigation](https://reactnavigation.org/docs/getting-started/) : Used for navigation - Platform-specific look-and-feel with smooth animations and gestures.
 * [Styled Components](https://styled-components.com/) : Are one of the new ways to use CSS in modern JavaScript.
 * [React Query](https://react-query.tanstack.com/) : Performant and powerful data synchronization for React. Reduce backend requests, sync and invalidate data, cache management.
+
+#### Screenshots
+
+...
 
 #### Contributors
 
