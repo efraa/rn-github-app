@@ -2,5 +2,7 @@
     "files.exclude": {
         "**/.git": true,
         "**/node_modules": true,
+        "**/.expo": true,
+        "**/.expo-shared": true,
     }
 }

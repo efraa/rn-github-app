@@ -28,6 +28,7 @@ const colors = readonly({
  */
 const fontSizes = readonly({
   title: size(22),
+  head: size(16),
   subtitle: size(14),
   text: size(12),
   small: size(10),

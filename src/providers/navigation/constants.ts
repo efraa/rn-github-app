@@ -1,5 +1,6 @@
 import { StackNavigationOptions } from '@react-navigation/stack'
 import { readonly } from 'src/helpers/readonly'
+import { stylesGuide } from '../styles'
 
 export enum SCREENS {
   appStack = 'app.main.stack',
@@ -15,5 +16,9 @@ export const DEFAULT_SCREENS_OPTIONS = readonly({
   cardStyle: { backgroundColor: 'white' },
   headerStyle: {
     shadowColor: 'transparent',
+  },
+  headerTitleStyle: {
+    fontFamily: stylesGuide.fonts.family.medium,
+    fontSize: stylesGuide.utils.parseSize(stylesGuide.fonts.sizes.head),
   },
 } as StackNavigationOptions)

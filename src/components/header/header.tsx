@@ -54,3 +54,17 @@ export const useHeader = (title: string) => {
     setOptions,
   }
 }
+
+export const useDefaultHeader = (title: string) => {
+  const { setOptions } = useRNavigation()
+
+  useLayoutEffect(() => {
+    setOptions({
+      title,
+    } as StackNavigationOptions)
+  }, [])
+
+  return {
+    setOptions,
+  }
+}
