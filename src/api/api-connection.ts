@@ -15,7 +15,7 @@ const requestOptions = (config: any) => ({
     ...config?.headers,
     'Content-Type': 'application/json',
     Accept: 'application/vnd.github.v3+json',
-    Authorization: `token ${API_ACCESS_TOKEN}`,
+    Authorization: API_ACCESS_TOKEN && `token ${API_ACCESS_TOKEN}`,
   },
 })
 
