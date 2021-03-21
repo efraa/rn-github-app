@@ -13,7 +13,6 @@
     "repos": "Repositories",
     "reposText": "A repository contains all of your project’s files and each file’s revision history. You can discuss and manage your project’s work within the repository.",
     "reposCommits": "Latest commits •",
-    "reposButtonText": "See project",
     "emptyInternetTitle": "No internet connection!",
     "emptyInternetText": "Your internet connection is down. Please fix it and then you can continue using Github App!"
 }
