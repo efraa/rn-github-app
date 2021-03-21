@@ -1,22 +1,20 @@
 import React from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
-import { SafeContainer } from 'src/components/safe-container'
-import { useNavigation } from 'src/hooks/use-navigation'
-import { useLanguage } from 'src/providers/languages'
-import { SCREENS } from 'src/providers/navigation/screens'
+import { useHeader } from 'src/components/header/header'
 
+import { UsersContainer } from 'src/containers/users-container'
+import { useLanguage } from 'src/providers/languages'
+
+/**
+ * Discover Screen
+ * @todo In the future this screen may have other components such as a search,
+ * at the moment it only renders the user's container but we can scale later.
+ *
+ * @author Efraa
+ */
 export const DiscoverScreen = () => {
-  const { navigate } = useNavigation()
   const { translate } = useLanguage()
 
-  return (
-    <SafeContainer>
-      <View>
-        <Text>{translate('discoverTitle')}</Text>
-        <TouchableOpacity onPress={() => navigate(SCREENS.filters)}>
-          <Text>Go to Filters</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeContainer>
-  )
+  useHeader(translate('discoverTitle'))
+
+  return <UsersContainer />
 }

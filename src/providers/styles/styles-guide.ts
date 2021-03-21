@@ -28,19 +28,18 @@ const colors = readonly({
  */
 const fontSizes = readonly({
   title: size(22),
-  subtitle: size(16),
+  subtitle: size(14),
   text: size(12),
   small: size(10),
 })
 
 const fonts = readonly({
   sizes: fontSizes,
-  family: 'poppinsBold',
-  weight: readonly({
-    regular: 400,
-    medium: 500,
-    bold: 700,
-  }),
+  family: {
+    bold: 'poppinsBold',
+    regular: 'poppinsRegular',
+    medium: 'poppinsMedium',
+  },
 })
 
 /**
@@ -50,11 +49,11 @@ const fonts = readonly({
  */
 const gaps = readonly({
   small: size(8),
-  normal: size(16),
-  large: size(24),
-  extraLarge: size(32),
-  big: size(42),
-  extraBig: size(52),
+  normal: size(12),
+  large: size(16),
+  extraLarge: size(24),
+  big: size(32),
+  extraBig: size(42),
 })
 
 /**

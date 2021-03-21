@@ -18,11 +18,7 @@ export const AppNavigator = () => (
     screenOptions={{ headerBackTitleVisible: false }}
     initialRouteName={SCREENS.discover}
   >
-    <Screen
-      name={SCREENS.discover}
-      options={{ headerShown: false }}
-      component={DiscoverScreen}
-    ></Screen>
+    <Screen name={SCREENS.discover} component={DiscoverScreen}></Screen>
     <Screen name={SCREENS.user} component={UserScreen}></Screen>
   </Navigator>
 )
