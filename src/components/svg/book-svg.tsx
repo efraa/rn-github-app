@@ -3,11 +3,11 @@ import Svg, { Path, G } from 'react-native-svg'
 import { useTheme } from 'src/hooks/use-theme'
 import { ISVGProps } from './props'
 
-export const BookSVG: React.FC<ISVGProps> = memo(({ color }) => {
+export const BookSVG: React.FC<ISVGProps> = memo(({ color, width, height }) => {
   const { colors } = useTheme()
 
   return (
-    <Svg viewBox="0 0 15 18.333">
+    <Svg viewBox="0 0 15 18.333" width={width} height={height}>
       <G transform="translate(0.833 0.833)">
         <Path
           d="M3.333,16.25a2.083,2.083,0,0,1,2.083-2.083h11.25"
