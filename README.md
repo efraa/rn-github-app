@@ -35,7 +35,10 @@ Follow this [guide](https://reactnative.dev/docs/environment-setup).
 
 #### Screenshots
 
-...
+<div style="display: flex; flex-direction: row;">
+  <img src="src/resources/images/screenshots/1-screen.png" alt="First Screen" width="210" height="432" />
+  <img src="src/resources/images/screenshots/2-screen.png" alt="First Screen" width="210" height="432" />
+</div>
 
 #### Contributors
 
