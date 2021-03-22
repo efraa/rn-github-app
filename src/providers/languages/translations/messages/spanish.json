@@ -12,7 +12,7 @@
     "following": "Siguiendo",
     "repos": "Repositorios",
     "reposText": "Un repositorio contiene todos los archivos de su proyecto y el historial de revisión de cada archivo. Puede discutir y administrar el trabajo de su proyecto dentro del repositorio.",
-    "reposCommits": "Últimos commits •",
+    "reposCommits": "Últimos commits",
     "emptyInternetTitle": "¡Sin conexión a Internet!",
     "emptyInternetText": "Tu conexión a Internet no funciona. ¡Por favor, corríjalo y luego podrá continuar usando la aplicación!"
 }
