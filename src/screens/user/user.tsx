@@ -24,12 +24,12 @@ export const UserScreen = () => {
 
   const { data: user, isSuccess } = useUser(username)
 
-  return isSuccess ? (
+  const User = () => (
     <ScrollView bounces={false} showsVerticalScrollIndicator={false}>
       <ProfileHeader user={user as UserDTO} />
       <Repositories user={user as UserDTO} />
     </ScrollView>
-  ) : (
-    <Spinner />
   )
+
+  return isSuccess ? <User /> : <Spinner />
 }
