@@ -1,4 +1,14 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Content } from 'src/components/typographies/typographies'
+import { useLanguage } from 'src/providers/languages'
 
-export const FiltersScreen = () => <View />
+export const FiltersScreen = () => {
+  const { translate } = useLanguage()
+
+  return (
+    <Content
+      title={translate('filtersTitle')}
+      text={translate('filtersText')}
+    />
+  )
+}

@@ -1,7 +1,7 @@
 import { readonly } from 'src/helpers/readonly'
 import { API } from './api-connection'
 import { API_PER_PAGE } from '@env'
-import { reposMapper, userMapper, usersMapper } from './mappers'
+import { reposMapper, userMapper, usersMapper } from './api-mappers'
 
 /**
  * Domains or resources
