@@ -1,16 +1,35 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import { UserDTO } from '@api'
+import { useRoute } from '@react-navigation/core'
+import React, { useLayoutEffect } from 'react'
+import { ScrollView } from 'react-native-gesture-handler'
 import { useDefaultHeader } from 'src/components/header/header'
-import { useLanguage } from 'src/providers/languages'
+import { ProfileHeader } from 'src/components/profile-header'
+import { Spinner } from 'src/components/spinner'
+import { Repositories } from 'src/containers/repositories'
+import { useUser } from 'src/hooks/api/use-user'
+import { useNavigation } from 'src/hooks/use-navigation'
+import { SCREENS } from 'src/providers/navigation/constants'
 
 export const UserScreen = () => {
-  useDefaultHeader('efra')
+  const {
+    params: { username },
+  }: any = useRoute()
+  const { navigate } = useNavigation()
 
-  const { translate } = useLanguage()
+  useLayoutEffect(() => {
+    if (!username) navigate(SCREENS.discover)
+  }, [])
 
-  return (
-    <View>
-      <Text></Text>
-    </View>
+  useDefaultHeader(username)
+
+  const { data: user, isSuccess } = useUser(username)
+
+  return isSuccess ? (
+    <ScrollView bounces={false} showsVerticalScrollIndicator={false}>
+      <ProfileHeader user={user as UserDTO} />
+      <Repositories user={user as UserDTO} />
+    </ScrollView>
+  ) : (
+    <Spinner />
   )
 }
