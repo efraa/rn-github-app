@@ -14,7 +14,7 @@ export const Repositories: React.FC<{ user: UserDTO }> = ({ user }) => {
   const Repos = () => (
     <>
       {repos?.map(repo => (
-        <RepositoryCard repo={repo} key={repo.name} />
+        <RepositoryCard repo={repo} username={user.username} key={repo.name} />
       ))}
     </>
   )
