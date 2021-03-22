@@ -1,4 +1,10 @@
-import { IListOfUsers, RepositoryDTO, TListMapper, UserDTO } from '@api'
+import {
+  CommitDTO,
+  IListOfUsers,
+  RepositoryDTO,
+  TListMapper,
+  UserDTO,
+} from '@api'
 import { readonly } from 'src/helpers/readonly'
 
 /**
@@ -41,6 +47,15 @@ export const reposMapper = (collection: TListMapper) => {
     language: repo?.language ?? repo?.default_branch,
     stars: repo?.stargazers_count ?? 0,
     branch: repo?.default_branch,
+  })) as any
+
+  return mapped
+}
+
+export const commitsMapper = (collection: TListMapper) => {
+  const mapped: CommitDTO[] = collection.map(commit => ({
+    id: commit?.sha,
+    message: commit?.commit?.message,
   })) as any
 
   return mapped

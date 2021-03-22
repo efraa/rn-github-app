@@ -1,7 +1,12 @@
 import { readonly } from 'src/helpers/readonly'
 import { API } from './api-connection'
 import { API_PER_PAGE } from '@env'
-import { reposMapper, userMapper, usersMapper } from './api-mappers'
+import {
+  commitsMapper,
+  reposMapper,
+  userMapper,
+  usersMapper,
+} from './api-mappers'
 
 /**
  * Domains or resources
@@ -50,4 +55,14 @@ export const getRepos = async (
   ).data
 
   return reposMapper(repos)
+}
+
+export const getCommits = async (
+  username: string,
+  repo: string,
+  perPage = Number(API_PER_PAGE)
+) => {
+  const repos = (await API.get(DOMAIN.commits(username, repo, perPage))).data
+
+  return commitsMapper(repos)
 }
