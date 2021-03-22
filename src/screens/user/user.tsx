@@ -1,9 +1,9 @@
 import { UserDTO } from '@api'
 import { useRoute } from '@react-navigation/core'
 import React, { useLayoutEffect } from 'react'
-import { ScrollView } from 'react-native-gesture-handler'
 import { useDefaultHeader } from 'src/components/header/header'
 import { ProfileHeader } from 'src/components/profile-header'
+import { ScreenContainer } from 'src/components/screen-container'
 import { Spinner } from 'src/components/spinner'
 import { Repositories } from 'src/containers/repositories'
 import { useUser } from 'src/hooks/api/use-user'
@@ -25,10 +25,10 @@ export const UserScreen = () => {
   const { data: user, isSuccess } = useUser(username)
 
   const User = () => (
-    <ScrollView bounces={false} showsVerticalScrollIndicator={false}>
+    <ScreenContainer>
       <ProfileHeader user={user as UserDTO} />
       <Repositories user={user as UserDTO} />
-    </ScrollView>
+    </ScreenContainer>
   )
 
   return isSuccess ? <User /> : <Spinner />
