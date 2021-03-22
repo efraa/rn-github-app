@@ -1,7 +1,7 @@
 import { readonly } from 'src/helpers/readonly'
 import { API } from './api-connection'
 import { API_PER_PAGE } from '@env'
-import { usersMapper } from './mappers'
+import { reposMapper, userMapper, usersMapper } from './mappers'
 
 /**
  * Domains or resources
@@ -33,4 +33,21 @@ export const getUsers = async (
   ).data
 
   return usersMapper(collection)
+}
+
+export const getUser = async (username: string) => {
+  const user = (await API.get(`${DOMAIN.users}/${username}`)).data
+
+  return userMapper(user)
+}
+
+export const getRepos = async (
+  username: string,
+  perPage = Number(API_PER_PAGE)
+) => {
+  const repos = (
+    await API.get(`${DOMAIN.users}/${username}/repos?per_page=${perPage}`)
+  ).data
+
+  return reposMapper(repos)
 }

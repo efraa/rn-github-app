@@ -32,5 +32,5 @@ declare module '@api' {
     repos: number
   }
 
-  export type TUsersMapper = { [key: string]: string }[]
+  export type TListMapper = { [key: string]: string }[]
 }
