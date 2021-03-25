@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { API_URL as baseURL, API_ACCESS_TOKEN } from '@env'
+import { readonly } from 'src/helpers/readonly'
 
 /**
  * Request Options
@@ -9,19 +10,13 @@ import { API_URL as baseURL, API_ACCESS_TOKEN } from '@env'
  * @link https://docs.github.com/en/rest/overview/resources-in-the-rest-api
  * @author Efraa
  */
-const requestOptions = (config: any) => ({
-  ...config,
+const requestOptions = readonly({
   headers: {
-    ...config?.headers,
     'Content-Type': 'application/json',
     Accept: 'application/vnd.github.v3+json',
     Authorization: API_ACCESS_TOKEN && `token ${API_ACCESS_TOKEN}`,
   },
+  baseURL,
 })
 
-const API = axios.create({ baseURL })
-
-// Request interceptor for API calls
-API.interceptors.request.use(requestOptions)
-
-export { API }
+export const API = axios.create(requestOptions)

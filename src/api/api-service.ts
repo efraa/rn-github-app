@@ -8,6 +8,8 @@ import {
   usersMapper,
 } from './api-mappers'
 
+const DEFAULT_PER_PAGE = Number(API_PER_PAGE)
+
 /**
  * Domains or resources
  * @author Efraa
@@ -15,8 +17,8 @@ import {
 const DOMAIN = readonly({
   users: '/users',
   repos: '/repos',
-  commits: (username: string, repo: string, perPage: number) =>
-    `/repos/${username}/${repo}/commits?per_page=${perPage}`,
+  commits: (username: string, repo: string) =>
+    `/repos/${username}/${repo}/commits`,
 })
 
 /**
@@ -30,11 +32,16 @@ const DOMAIN = readonly({
  * @author Efraa
  */
 export const getUsers = async (
-  perPage = Number(API_PER_PAGE),
+  per_page = DEFAULT_PER_PAGE,
   since?: number
-) => {
+): Promise<Array<any>> => {
   const collection = (
-    await API.get(`${DOMAIN.users}?per_page=${perPage}&since=${since}`)
+    await API.get(DOMAIN.users, {
+      params: {
+        per_page,
+        since,
+      },
+    })
   ).data
 
   return usersMapper(collection)
@@ -48,10 +55,14 @@ export const getUser = async (username: string) => {
 
 export const getRepos = async (
   username: string,
-  perPage = Number(API_PER_PAGE)
+  per_page = DEFAULT_PER_PAGE
 ) => {
   const repos = (
-    await API.get(`${DOMAIN.users}/${username}/repos?per_page=${perPage}`)
+    await API.get(`${DOMAIN.users}/${username}/repos`, {
+      params: {
+        per_page,
+      },
+    })
   ).data
 
   return reposMapper(repos)
@@ -60,9 +71,15 @@ export const getRepos = async (
 export const getCommits = async (
   username: string,
   repo: string,
-  perPage = Number(API_PER_PAGE)
+  per_page = DEFAULT_PER_PAGE
 ) => {
-  const repos = (await API.get(DOMAIN.commits(username, repo, perPage))).data
+  const repos = (
+    await API.get(DOMAIN.commits(username, repo), {
+      params: {
+        per_page,
+      },
+    })
+  ).data
 
   return commitsMapper(repos)
 }
