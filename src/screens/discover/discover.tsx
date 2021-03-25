@@ -1,7 +1,7 @@
 import React from 'react'
-import { useHeader } from 'src/components/header/header'
 
 import { UsersContainer } from 'src/containers/users-container'
+import { useHeader } from 'src/hooks/use-header'
 import { useLanguage } from 'src/providers/languages'
 
 /**
