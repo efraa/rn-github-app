@@ -1,5 +1,20 @@
 import React from 'react'
+import { LogBox } from 'react-native'
 import { QueryClient, QueryClientProvider } from 'react-query'
+
+/**
+ * @throws Setting a timer for a long period of time...
+ *
+ * @description Setting a timer for a long period of time, i.e. multiple minutes,
+ * is a performance and correctness issue on Android as it keeps the timer module awake,
+ * and timers can only be called when the app is in the foreground.
+ *
+ * In the case of react-query, this is related to cacheTime. It does not affect your application,
+ * since garbage collection occurs if you have the application in the foreground.
+ *
+ * @link https://github.com/facebook/react-native/issues/12981
+ */
+LogBox.ignoreLogs(['Setting a timer'])
 
 const queryClient = new QueryClient()
 
