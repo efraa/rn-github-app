@@ -13,7 +13,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "husky": "husky install",
+    "husky": "husky",
     "commitlint": "commitlint"
   },
   "dependencies": {

@@ -1,61 +1,79 @@
 {
-    "extends": [
-      "plugin:react/recommended",
-      "prettier/react",
-      "eslint:recommended",
-      "prettier/@typescript-eslint",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:security/recommended"
-    ],
-    "plugins": ["react", "@typescript-eslint", "security", "prettier"],
-    "parser": "@typescript-eslint/parser",
-    "rules": {
-      "import/no-unresolved": 0,
-      "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [".jsx", ".tsx"]
-        }
-      ],
-      "react/state-in-constructor": ["off", "never"],
-      "import/extensions": [0, "never"],
-      "import/prefer-default-export": "off",
-      "react/destructuring-assignment": [
-        "warn",
-        "always",
-        {
-          "ignoreClassFields": true
-        }
-      ],
-      "react/prefer-stateless-function": [
-        "warn",
-        {
-          "ignorePureComponents": true
-        }
-      ],
-      "react/jsx-props-no-spreading": [
-        "warn",
-        {
-          "html": "enforce",
-          "custom": "ignore",
-          "explicitSpread": "enforce",
-          "exceptions": []
-        }
-      ],
-      "indent": "off",
-      "@typescript-eslint/indent": ["warn", 2],
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/no-empty-function": "off",
-      "@typescript-eslint/ban-ts-comment": "warn",
-      "security/detect-eval-with-expression": "error",
-      "quotes": ["warn", "single"],
-      "semi": ["error", "never"],
-      "no-useless-escape": "off",
-      "no-duplicate-imports": "warn",
-      "comma-dangle": ["error", "only-multiline"],
-      "react/display-name": "off",
-      "react/prop-types": "off"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "prettier/react",
+    "eslint:recommended",
+    "prettier/@typescript-eslint",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:security/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "security", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "ignorePatterns": ["__tests__/", "__tests__/setup/"]
-  }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "react/state-in-constructor": ["off", "never"],
+    "import/extensions": [0, "never"],
+    "import/prefer-default-export": "off",
+    "react/destructuring-assignment": [
+      "warn",
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
+    "react/prefer-stateless-function": [
+      "warn",
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "warn",
+      {
+        "html": "enforce",
+        "custom": "ignore",
+        "explicitSpread": "enforce",
+        "exceptions": []
+      }
+    ],
+    "indent": "off",
+    "@typescript-eslint/indent": ["warn", 2],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "security/detect-eval-with-expression": "error",
+    "quotes": ["warn", "single"],
+    "semi": ["error", "never"],
+    "no-useless-escape": "off",
+    "no-duplicate-imports": "warn",
+    "comma-dangle": ["error", "only-multiline"],
+    "react/display-name": "off",
+    "react/prop-types": "off"
+  },
+  "ignorePatterns": ["__tests__/", "__tests__/setup/"]
+}

@@ -12,5 +12,8 @@ web-build/
 # macOS
 .DS_Store
 
+# Husky
+.husky/_
+
 # Env
 .env
