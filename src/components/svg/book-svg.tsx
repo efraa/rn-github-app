@@ -7,7 +7,7 @@ export const BookSVG: React.FC<ISVGProps> = memo(({ color, width, height }) => {
   const { colors } = useTheme()
 
   return (
-    <Svg viewBox="0 0 15 18.333" width={width} height={height}>
+    <Svg viewBox="0 0 15 18.333" width={width} height={height ?? width}>
       <G transform="translate(0.833 0.833)">
         <Path
           d="M3.333,16.25a2.083,2.083,0,0,1,2.083-2.083h11.25"
