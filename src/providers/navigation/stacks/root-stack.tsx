@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  createStackNavigator,
-  TransitionPresets,
-  StackNavigationOptions,
-} from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import { DEFAULT_SCREENS_OPTIONS, SCREENS } from '../constants'
 import { AppNavigator } from './app-stack'
 
@@ -25,36 +21,14 @@ const ModalScreens = () => (
   </>
 )
 
-/**
- * Modal Presentation > IOS 13.x
- *
- * @description In the new version of react-navigation 6.0-next,
- * The modals in stack now use the presentation style on iOS by default,
- * and there's a new slide animation for modals on Android.
- *
- * @link https://reactnavigation.org/blog/2021/03/12/react-navigation-6.0-next
- *
- * @todo The new version is not official yet, I must change this when it is.
- * @since New beta release -> March 13, 2021
- */
-const modalPresentationIOS = ({
-  route,
-  navigation,
-}): StackNavigationOptions => ({
-  ...DEFAULT_SCREENS_OPTIONS,
-  headerShown: false,
-  gestureEnabled: true,
-  cardOverlayEnabled: true,
-  headerStatusBarHeight:
-    navigation.dangerouslyGetState().routes.indexOf(route) > 0 ? 0 : undefined,
-  ...TransitionPresets.ModalPresentationIOS,
-})
-
 export const RootNavigator = () => (
   <Navigator
     mode="modal"
     initialRouteName={SCREENS.appStack}
-    screenOptions={modalPresentationIOS}
+    screenOptions={{
+      ...DEFAULT_SCREENS_OPTIONS,
+      headerShown: false,
+    }}
   >
     <Screen name={SCREENS.appStack} component={AppNavigator} />
     {ModalScreens()}
