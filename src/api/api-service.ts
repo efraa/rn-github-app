@@ -31,10 +31,7 @@ const DOMAIN = readonly({
  *
  * @author Efraa
  */
-export const getUsers = async (
-  per_page = DEFAULT_PER_PAGE,
-  since?: number
-): Promise<Array<any>> => {
+export const getUsers = async (per_page = DEFAULT_PER_PAGE, since?: number) => {
   const collection = (
     await API.get(DOMAIN.users, {
       params: {
