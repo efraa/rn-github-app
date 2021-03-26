@@ -4,5 +4,7 @@
         "**/node_modules": true,
         "**/.expo": true,
         "**/.expo-shared": true,
+        "**/.husky": true,
+        "**/.commitlintrc.json": true,
     }
 }

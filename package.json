@@ -6,7 +6,7 @@
     "url": "https://github.com/Efraa"
   },
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

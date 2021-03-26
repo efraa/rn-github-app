@@ -1,7 +1,6 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
     "node": true
   },
   "extends": [
@@ -73,7 +72,9 @@
     "no-duplicate-imports": "warn",
     "comma-dangle": ["error", "only-multiline"],
     "react/display-name": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "linebreak-style": ["error"],
+    "prettier/prettier": ["error"]
   },
   "ignorePatterns": ["__tests__/", "__tests__/setup/"]
 }
