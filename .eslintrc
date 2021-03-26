@@ -49,15 +49,11 @@
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/ban-ts-comment": "warn",
       "security/detect-eval-with-expression": "error",
-      "linebreak-style": ["error", "windows"],
       "quotes": ["warn", "single"],
       "semi": ["error", "never"],
       "no-useless-escape": "off",
       "no-duplicate-imports": "warn",
       "comma-dangle": ["error", "only-multiline"],
-      "prettier/prettier": ["error", {
-        "endOfLine": "auto"
-      }],
       "react/display-name": "off",
       "react/prop-types": "off"
     },
