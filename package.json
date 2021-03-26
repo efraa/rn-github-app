@@ -5,12 +5,16 @@
     "name": "Efra Peralta",
     "url": "https://github.com/Efraa"
   },
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "husky": "husky install",
+    "commitlint": "commitlint"
   },
   "dependencies": {
     "@react-native-community/netinfo": "5.9.7",
@@ -38,6 +42,8 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
@@ -49,8 +55,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-security": "^1.4.0",
+    "husky": "^5.2.0",
     "prettier": "^2.0.5",
     "typescript": "~4.0.0"
-  },
-  "private": true
+  }
 }
