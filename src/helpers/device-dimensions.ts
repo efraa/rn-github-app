@@ -1,4 +1,4 @@
-import { Dimensions, Platform, PixelRatio } from 'react-native'
+import { Dimensions, PixelRatio } from 'react-native'
 import { readonly } from './readonly'
 
 type IBased = 'width' | 'height'
