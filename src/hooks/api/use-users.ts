@@ -1,7 +1,6 @@
 import { useInfiniteQuery } from 'react-query'
 import { getUsers } from 'src/api/api-service'
 import { IListOfUsers } from '@api'
-import { REACT_QUERY_BASE_CONFIG } from './hooks-base-config'
 
 /**
  * use Users Hook
@@ -15,7 +14,6 @@ export const useUsers = (perPage?: number, queryKey = 'users') => {
     queryKey,
     async ({ pageParam = 0 }) => getUsers(perPage, pageParam),
     {
-      ...REACT_QUERY_BASE_CONFIG,
       getNextPageParam: state => Number(state.pop()?.id) + 1 ?? false,
     }
   )

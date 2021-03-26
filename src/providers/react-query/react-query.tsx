@@ -1,6 +1,7 @@
 import React from 'react'
 import { LogBox } from 'react-native'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClientProvider } from 'react-query'
+import { queryClient } from './query-client'
 
 /**
  * @throws Setting a timer for a long period of time...
@@ -15,8 +16,6 @@ import { QueryClient, QueryClientProvider } from 'react-query'
  * @link https://github.com/facebook/react-native/issues/12981
  */
 LogBox.ignoreLogs(['Setting a timer'])
-
-const queryClient = new QueryClient()
 
 /**
  * Query Provider
