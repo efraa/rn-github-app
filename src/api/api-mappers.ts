@@ -52,11 +52,8 @@ export const reposMapper = (collection: TListMapper) => {
   return mapped
 }
 
-export const commitsMapper = (collection: TListMapper) => {
-  const mapped: CommitDTO[] = collection.map(commit => ({
+export const commitsMapper = (collection: TListMapper): CommitDTO[] =>
+  collection.map(commit => ({
     id: commit?.sha,
     message: commit?.commit?.message,
   })) as any
-
-  return mapped
-}
