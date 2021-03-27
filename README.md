@@ -33,6 +33,15 @@ Follow this [guide](https://reactnative.dev/docs/environment-setup).
 > emulators or use your device. As an alternative to this, you can
 > view the scripts in package.json and run from there.
 
+#### Conventional Commits
+
+A specification for adding human and machine readable meaning to commit messages.
+
+> If you want to contribute, you want to see this.
+
+* [Docs](https://www.conventionalcommits.org/en/v1.0.0/)
+* [Commits guide](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
 #### Screenshots
 
 <div style="display: flex; flex-direction: row;">
