@@ -3,7 +3,7 @@ import React from 'react'
 import { RepositoryCard } from 'src/components/repository-card'
 import { Spinner } from 'src/components/spinner'
 import { Content } from 'src/components/typographies/typographies'
-import { useRepos } from 'src/hooks/api/use-repos'
+import { useRepos } from 'src/api/hooks/queries/use-repos'
 import { useLanguage } from 'src/providers/languages'
 import { Container, ReposContainer } from './styles'
 

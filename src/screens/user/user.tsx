@@ -5,7 +5,7 @@ import { ProfileHeader } from 'src/components/profile-header'
 import { ScreenContainer } from 'src/components/screen-container'
 import { Spinner } from 'src/components/spinner'
 import { Repositories } from 'src/containers/repositories'
-import { useUser } from 'src/hooks/api/use-user'
+import { useUser } from 'src/api/hooks/queries/use-user'
 import { useHeader } from 'src/hooks/use-header'
 import { useNavigation } from 'src/hooks/use-navigation'
 

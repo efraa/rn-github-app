@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useMemo } from 'react'
 import { useRoute } from '@react-navigation/core'
 import { useNavigation } from 'src/hooks/use-navigation'
-import { useCommits } from 'src/hooks/api/use-repo-commits'
+import { useCommits } from 'src/api/hooks/queries/use-repo-commits'
 import { Spinner } from 'src/components/spinner'
 import { Content, Heading } from 'src/components/typographies/typographies'
 import { useLanguage } from 'src/providers/languages'

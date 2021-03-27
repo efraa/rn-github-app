@@ -21,6 +21,7 @@ const defaultOptions: DefaultOptions = readonly({
     staleTime: DEFAULT_TIME,
     retry: 1,
     refetchOnWindowFocus: false,
+    notifyOnChangeProps: ['data', 'error'],
     onError,
   },
   mutations: {

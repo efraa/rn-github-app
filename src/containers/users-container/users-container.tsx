@@ -3,7 +3,7 @@ import React, { useMemo } from 'react'
 import { Spinner } from 'src/components/spinner'
 import { Text } from 'src/components/typographies'
 import { UserCard } from 'src/components/user-card'
-import { useUsers } from 'src/hooks/api/use-users'
+import { useUsers } from 'src/api/hooks/queries/use-users'
 import { useLanguage } from 'src/providers/languages'
 import { Container } from './styles'
 
