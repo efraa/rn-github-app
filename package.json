@@ -14,7 +14,9 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "husky": "husky",
-    "commitlint": "commitlint"
+    "commitlint": "commitlint",
+    "lint": "eslint --ext .ts,.tsx src/ --fix",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "@react-native-community/netinfo": "5.9.7",
