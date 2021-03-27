@@ -15,8 +15,8 @@
     "eject": "expo eject",
     "husky": "husky",
     "commitlint": "commitlint",
-    "lint": "eslint --ext .ts,.tsx src/ --fix",
-    "format": "prettier --write src"
+    "lint": "eslint . --ext .tsx,.ts --fix",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@react-native-community/netinfo": "5.9.7",

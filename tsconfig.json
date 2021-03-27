@@ -5,14 +5,18 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "*": ["*"]
+      "*": [
+        "*"
+      ]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -28,7 +32,7 @@
     "strictNullChecks": true,
     "downlevelIteration": true,
     "noImplicitReturns": false,
-    "typeRoots" : [
+    "typeRoots": [
       "./node_modules/@types",
       "src/@types"
     ],
